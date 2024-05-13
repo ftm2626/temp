@@ -1,0 +1,93 @@
+export const assetUris = {
+  pdfGuide: "https://st1.cveh.ir/vesalgasht/Guide/Passenger_PWA_Guide01.pdf",
+};
+
+
+export const apiUris = {
+  auth: {
+    loginUri: "/login",
+    resetPassword: "/reset-password",
+    getChatToken: "/chat/token",
+  },
+  driver: {
+    currentServicesUri: "/drivers/receipts/",
+    startServiceUri: "/drivers/receipts/start/",
+    stopServiceUri: "/drivers/receipts/stop/",
+    accepableServicesUri: "/drivers/services/",
+    acceptServicesUri: "/drivers/services/accept/",
+    rejectServicesUri: "/drivers/services/reject/",
+    createReceptUri: "/drivers/receipts/create",
+    passengersListUri: "/drivers/passengers",
+    driverInfoUri: "/drivers/options/driver_info",
+    incompleteReceptsUri: "/drivers/receipts/incomplete",
+    completeReciptsUri: "/drivers/receipts/report",
+    gpsParamsUri: "/options/gps_options",
+    locationsUri: "/drivers/locations",
+    getCalender: "/drivers/calender/",
+    submitCalender: "/drivers/calender/change-status",
+  },
+  passanger: {
+    ReceiptListUri: "/passengers/receipts",
+    compeleteReceiptUri: "/passengers/receipts/complete/",
+    removeReceiptUri: "/passengers/receipts/remove/",
+    removeRequestUri: "/passengers/service-request/destroy/",
+    searchReceiptUri: "/passengers/receipts/search",
+    receiptQuestionsUri: "/passengers/receipts/questions",
+    ticketListUri: "/passengers/tickets",
+    createTicketUri: "/passengers/tickets/create",
+    createAddressUri: "/passengers/address/store",
+    editAddressUri: "/passengers/address/update/",
+    servicesListUri: "/passengers/receipts/search",
+    createServiceUri: "/passengers/service-request/create",
+    storeServiceUri: "/passengers/service-request/store",
+    updateServiceUri: "/passengers/service-request/update/",
+    editServiceUri: "/passengers/service-request/edit/",
+    subServiceUri: "/passengers/service-request/sub-service/",
+    AddressListUri: "/passengers/address",
+    requestListUri: "/passengers/service-request/my-services?page=",
+  },
+  inspectors: {
+    index: "",
+    driversDetails: "",
+    getInspectInfo: "",
+    saveInspect: "",
+    inspectionsList: "",
+    deleteInspection: "",
+    inspectionDetails: "",
+  },
+};
+
+export const localUris = {
+  auth: { login: "/login", forgotPassword: "/forgot-password" },
+  driver: {
+    index: "/drivers",
+    services: "/drivers/services",
+    requestRegistration: "/drivers/request-registration",
+    carInfo: "/drivers/car-info",
+    incomplete: "/drivers/incomplete-invoice",
+    compelete: "/drivers/compeleted-invoice",
+    calender: "/drivers/calender",
+  },
+  passanger: {
+    index: "/passangers",
+    incomplete: "/passangers/incomplete",
+    requestRegistration: "/passangers/request-registration",
+    requestList: "/passangers/requests-list",
+    support: "/passangers/support",
+    report: "/passangers/report",
+    requestSupport: "/passangers/request-support",
+    request: "/passangers/request/",
+    addresses: "/passangers/addresses",
+    reportList: "/passangers/report-list",
+  },
+  inspectors: {
+    index: "/inspectors",
+    driversDetails: "/inspectors/driver-details",
+    inspectorsInspect: "/inspectors/inspect",
+    inspectorsInspections: "/inspectors/inspections",
+    inspectorsInspectionDetails: "/inspectors/inspection-details",
+  },
+  chat: {
+    index: "/chat",
+  },
+};

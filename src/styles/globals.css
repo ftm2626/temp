@@ -1,0 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "peyda";
+  src: url("/assets/fonts/peyda/farsi_namerals/TTF/PeydaFaNum-Regular.ttf");
+  src: url("/assets/fonts/peyda/farsi_namerals/EOT/PeydaFaNum-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/peyda/farsi_namerals/WebFonts/fonts/woff2/PeydaWebFaNum-Regular.woff2")
+      format("woff2"),
+    url("/assets/fonts/peyda/farsi_namerals/WebFonts/fonts/woff/PeydaWebFaNum-Regular.woff")
+      format("woff"),
+    url("/assets/fonts/peyda/farsi_namerals/TTF/PeydaFaNum-Regular.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "peydaBold";
+  src: url("/assets/fonts/peyda/farsi_namerals/TTF/PeydaFaNum-Bold.ttf");
+  src: url("/assets/fonts/peyda/farsi_namerals/EOT/PeydaFaNum-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/peyda/farsi_namerals/WebFonts/fonts/woff2/PeydaWebFaNum-Bold.woff2")
+      format("woff2"),
+    url("/assets/fonts/peyda/farsi_namerals/WebFonts/fonts/woff/PeydaWebFaNum-Bold.woff")
+      format("woffmake"),
+    url("/assets/fonts/peyda/farsi_namerals/TTF/PeydaFaNum-Bold.ttf")
+      format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "peydaMedium";
+  src: url("/assets/fonts/peyda/farsi_namerals/TTF/PeydaFaNum-Medium.ttf");
+  src: url("/assets/fonts/peyda/farsi_namerals/EOT/PeydaFaNum-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/peyda/farsi_namerals/WebFonts/fonts/woff2/PeydaWebFaNum-Medium.woff2")
+      format("woff2"),
+    url("/assets/fonts/peyda/farsi_namerals/WebFonts/fonts/woff/PeydaWebFaNum-Medium.woff")
+      format("woffmake"),
+    url("/assets/fonts/peyda/farsi_namerals/TTF/PeydaFaNum-Medium.ttf")
+      format("truetype");
+  font-weight: auto;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "peydaBoldExtra";
+  src: url("/assets/fonts/peyda/farsi_namerals/TTF/PeydaFaNum-ExtraBold.ttf");
+  src: url("/assets/fonts/peyda/farsi_namerals/EOT/PeydaFaNum-ExtraBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/peyda/farsi_namerals/WebFonts/fonts/woff2/PeydaWebFaNum-ExtraBold.woff2")
+      format("woff2"),
+    url("/assets/fonts/peyda/farsi_namerals/WebFonts/fonts/woff/PeydaWebFaNum-ExtraBold.woff")
+      format("woff"),
+    url("/assets/fonts/peyda/farsi_namerals/TTF/PeydaFaNum-ExtraBold.ttf")
+      format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #575454;
+  border-radius: 10px;
+}
+
+html {
+  height: 100%;
+  -webkit-tap-highlight-color: transparent; /* for removing the highlight */
+}
+body {
+  direction: rtl;
+  font-family: "peyda" !important;
+  scroll-behavior: smooth !important;
+  background-color: #f1f1f2;
+  height: 100%;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+#__next {
+  height: 100%;
+}
+.rtl {
+  direction: rtl;
+}
+.ltr {
+  direction: ltr;
+}
+.rmdp-container {
+  width: 100% !important;
+  height: 44px !important;
+  border-radius: none !important;
+  margin-top: 0.75rem !important;
+}
+
+.rmdp-container span,
+.rmdp-week-day {
+  font-size: 24px !important;
+}
+
+.rmdp-container,
+.rmdp-container > div,
+.rmdp-container > div > div,
+.rmdp-container > div > div > div,
+.rmdp-container > div > div > div > div,
+.rmdp-container > div > div > div > div > div,
+.rmdp-container > div > div > div > div > div > div,
+.rmdp-container > div > div > div > div > div > div > div,
+.rmdp-container > div > div > div > div > div > div > div > div {
+  width: 100% !important;
+}
+
+.rmdp-ep-arrow{
+  display: none !important;
+}
+
+.rmdp-selected .sd {
+  /* background: #000 !important; */
+}
+
+.rmdp-input {
+  padding: 0.5rem !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 8px !important;
+  border-width: 1px !important;
+  margin: 0 !important;
+}
+
+.rmdp-container .gray {
+  border-color: rgb(217 217 217) !important;
+}
+
+.rmdp-container .red {
+  border-color: rgb(208 68 73) !important;
+}
+
+.rmdp-input:disabled {
+  background-color: white;
+}
+
+.rmdp-input::placeholder {
+  color: black;
+}
+
+.rmdp-input:focus {
+  border-color: rgb(241 241 242) !important;
+}
+
+.rmdp-day.rmdp-selected span:not(.highlight) {
+  background-color: #414042 !important;
+}
+
+.rmdp-day span {
+  /* padding: 5px !important; */
+  min-height: 30px !important;
+  min-width: 30px !important;
+}
+
+.Toastify__toast-container {
+  right: 0px !important;
+  max-width: 100% !important;
+}
+
+.swiper-slide-prev,
+.swiper-slide-next {
+  opacity: 0.5;
+  font-size: 25px;
+  line-height: 46px;
+}
+
+.swiper-slide-active {
+  font-size: 40px;
+  line-height: 46px;
+}
+
+
+.audio-recorder{
+  background-color: transparent !important;
+  box-shadow: none !important;
+  width: auto !important;
+}
+
+.audio-recorder-mic{
+  height: 100% !important;
+  padding: 0 !important;
+}
+
+
+
+.recording .audio-recorder-mic{
+  width: 20px !important;
+  height: 20px !important;
+  margin-left: 5px;
+}
+
+body.modal-open {
+  overflow: hidden;
+}

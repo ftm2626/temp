@@ -1,4 +1,3 @@
-import withPWAInit from "@ducanh2912/next-pwa";
 import nextPwa from "next-pwa"
 
 const withPWA = nextPwa({
