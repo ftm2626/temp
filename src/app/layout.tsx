@@ -1,25 +1,19 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
+import "../styles/globals.css";
 import type { Metadata, Viewport } from "next";
 
-const APP_NAME = "PWA App";
-const APP_DEFAULT_TITLE = "My Awesome PWA App";
-const APP_TITLE_TEMPLATE = "%s - PWA App";
-const APP_DESCRIPTION = "Best PWA app in the world!";
+const APP_NAME = "Vesalgasht PWA";
+const APP_DEFAULT_TITLE = "وصال گشت";
+const APP_DESCRIPTION = "این برنامه وصال گشت است.";
 
 export const metadata: Metadata = {
   applicationName: APP_NAME,
-  title: {
-    default: APP_DEFAULT_TITLE,
-    template: APP_TITLE_TEMPLATE,
-  },
+  title: APP_DEFAULT_TITLE,
   description: APP_DESCRIPTION,
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
     title: APP_DEFAULT_TITLE,
-    // startUpImage: [],
   },
   formatDetection: {
     telephone: false,
@@ -27,18 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: APP_NAME,
-    title: {
-      default: APP_DEFAULT_TITLE,
-      template: APP_TITLE_TEMPLATE,
-    },
-    description: APP_DESCRIPTION,
-  },
-  twitter: {
-    card: "summary",
-    title: {
-      default: APP_DEFAULT_TITLE,
-      template: APP_TITLE_TEMPLATE,
-    },
+    title: APP_DEFAULT_TITLE,
     description: APP_DESCRIPTION,
   },
 };
@@ -47,7 +30,6 @@ export const viewport: Viewport = {
   themeColor: "#FFFFFF",
 };
 
-const inter = Inter({ subsets: ["latin"] });
 
 
 export default function RootLayout({
@@ -56,8 +38,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="fa" className="bg-black">
+      <body className="max-w-[30rem] mx-auto [&>main]:h-screen bg-main-bg bg-contain">
+        {children}
+      </body>
     </html>
   );
 }

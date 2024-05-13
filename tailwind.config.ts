@@ -2,9 +2,8 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./src/app/offline/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -33,6 +32,9 @@ const config: Config = {
         light04: "#F9FAFA",
         light05: "#FCFCFC",
         green01: "#31644b",
+      },
+      backgroundImage: {
+        "main-bg": "url('/assets/png/main-bg.jpg')",
       },
     },
   },
