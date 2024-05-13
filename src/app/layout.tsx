@@ -1,5 +1,7 @@
 import "../styles/globals.css";
 import type { Metadata, Viewport } from "next";
+import { getCookie } from "cookies-next";
+import { store } from "@/redux/store";
 
 const APP_NAME = "Vesalgasht PWA";
 const APP_DEFAULT_TITLE = "وصال گشت";
@@ -29,9 +31,8 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   themeColor: "#FFFFFF",
 };
-
-
-
+const role = store.getState().AuthSlice.role;
+console.log(role)
 export default function RootLayout({
   children,
 }: Readonly<{

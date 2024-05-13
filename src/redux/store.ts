@@ -1,5 +1,4 @@
 import storage from "redux-persist/lib/storage";
-import { setupListeners } from "@reduxjs/toolkit/dist/query";
 import { persistReducer, persistStore } from "redux-persist";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import PassSlice from "./slice/PassSlice";
@@ -10,8 +9,7 @@ import { PassQueryApi } from "./api/PassQueryApi";
 import { AuthMutateApi } from "./api/AuthMutateApi";
 // import { PassMutateApi } from "./api/PassMutateApi";
 import { DriversQueryApi } from "./api/DriversQueryApi";
-import { DriversMutateApi } from "./api/DriversMutateApi";
-
+import { setupListeners } from "@reduxjs/toolkit/query";
 
 const persistConfig = {
   key: "root",
@@ -38,7 +36,7 @@ export const store = configureStore({
     getDefaultMiddleware({ serializableCheck: false }).concat(
       AuthMutateApi.middleware,
       DriversQueryApi.middleware,
-      PassQueryApi.middleware,
+      PassQueryApi.middleware
     ),
 });
 

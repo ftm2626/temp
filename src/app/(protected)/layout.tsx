@@ -3,7 +3,10 @@ export default function ProtectedLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <main>
-    <div>back</div>
-    {children}</main>;
+  return (
+    <main>
+      <div>back</div>
+      {children}
+    </main>
+  );
 }

@@ -8,17 +8,14 @@ import {
   useLoginMutation,
 } from "@/redux/api/AuthMutateApi";
 import { useGpsInfoQuery } from "@/redux/api/DriversQueryApi";
-import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import { useAppSelector } from "@/redux/hooks";
 import { RootStateType } from "@/redux/store";
 import { localUris } from "@/utils/uris";
-import { useRouter } from "next/navigation";
+import { redirect } from "next/navigation";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { toast } from "react-toastify";
-import { EventEmitter } from "stream";
 
 export default function Uselogin() {
-  const router = useRouter();
-  const dispatch = useAppDispatch()
   const {
     register,
     handleSubmit,
@@ -39,11 +36,9 @@ export default function Uselogin() {
       if (data?.status === 201) {
         switch (data?.data?.role) {
           case "مسافر":
-            router.push(localUris.passanger.index);
-            break;
+            redirect(localUris.passanger.index);
           case "راننده":
-            router.push(localUris.driver.index);
-            break;
+            redirect(localUris.driver.index);
           default:
             break;
         }
@@ -56,7 +51,7 @@ export default function Uselogin() {
       selectFromResult: ({ data, isLoading }) => {
         if (data?.status === 200) {
           toast.success(data?.message, { toastId: "forgotPassword" });
-          router.push(localUris.auth.login);
+          redirect(localUris.auth.login);
         }
         return { isLoading };
       },

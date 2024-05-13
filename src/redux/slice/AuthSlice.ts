@@ -28,8 +28,12 @@ export const AuthSlice = createSlice({
     builder.addMatcher(
       AuthMutateApi.endpoints.login.matchFulfilled,
       (state, { payload }) => {
+        console.log(payload);
         if (payload.status === 201) {
           setCookie("vesal-pwa-token", payload?.data?.token, {
+            maxAge: 3153600,
+          });
+          setCookie("vesal-pwa-role", payload?.data?.role, {
             maxAge: 3153600,
           });
           state.name =
